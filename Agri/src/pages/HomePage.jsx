@@ -1,10 +1,16 @@
+import Navbar from "../components/navbar/Navbar";
+import Hero from "../components/Home/Hero";
+import Footer from "../components/Footer/Footer";
 import React from 'react'
-import Hero from '../components/Home/Hero'
 
 function HomePage() {
   return (
-<Hero/>
-)
+    <>
+      
+      <Hero />
+      
+    </>
+  );
 }
 
-export default HomePage
+export default HomePage;
