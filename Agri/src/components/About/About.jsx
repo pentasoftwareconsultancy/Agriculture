@@ -1,14 +1,10 @@
 import React from 'react'
-
+import Frame from "../../assets/Frame.png";
 function About() {
   return (
-    <div>  
+    <div className="w-[1920] h-[326.25]  top-[178.5px] opacity-100 ">  
       
-      
-      
-      <h1>
-        hlo
-      </h1>
+      <img src={Frame} alt="About_Frame" />
       
       
       
