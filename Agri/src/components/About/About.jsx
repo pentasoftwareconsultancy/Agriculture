@@ -2,7 +2,24 @@ import React from 'react'
 
 function About() {
   return (
-    <div>    </div> 
+    <div>  
+      
+      
+      
+      <h1>
+        hlo
+      </h1>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        </div> 
   
   )
 }
