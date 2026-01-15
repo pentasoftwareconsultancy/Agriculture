@@ -9,7 +9,7 @@ function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">AgriTech</h3>
             <p className="text-gray-400">Empowering farmers with modern agricultural solutions.</p>
-          </div>
+          </div>gytyty
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
