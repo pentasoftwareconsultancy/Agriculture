@@ -1,35 +1,177 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import logo from "../../assets/logow.png";
+import React from "react";
 
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white mt-auto">
-      <div className="container mx-auto px-4 py-8"> 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[#24231D] text-[#9f9f9f]">
+
+      {/* ================= MAIN FOOTER ================= */}
+      <div className="max-w-[1200px] mx-auto px-6 pt-20 pb-16 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+
+          {/* ===== LOGO + ABOUT ===== */}
           <div>
-            <h3 className="text-xl font-bold mb-4">AgriTech</h3>
-            <p className="text-gray-400">Empowering farmers with modern agricultural solutions.</p>
+            <div className="flex items-center gap-2 mb-6">
+              <img src={logo} alt="Agrios" className="h-[42px]" />
+            </div>
+
+            {/* EXACT LINE BREAK TEXT */}
+            <p className="text-[14px] leading-7">
+              There are many variations of passages
+              <br />
+              of lorem ipsum available, but the
+              <br />
+              majority suffered.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-4 mt-6">
+              {["twitter", "facebook-f", "pinterest-p", "instagram"].map(
+                (icon) => (
+                  <div
+                    key={icon}
+                    className="w-9 h-9 rounded-full bg-[#2a2a22] flex items-center justify-center cursor-pointer hover:bg-green-600 transition"
+                  >
+                    <i className={`fa-brands fa-${icon} text-white text-sm`} />
+                  </div>
+                )
+              )}
+            </div>
           </div>
+
+          {/* ===== EXPLORE ===== */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-white transition">Home</Link></li>
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition">About</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition">Services</Link></li>
+            <h3 className="text-white text-[18px] font-semibold mb-6">
+              Explore
+              <span className="flex items-center gap-2 mt-2">
+                <span className="w-8 h-[2px] bg-green-500"></span>
+                <span className="w-1 h-1 bg-green-500 rounded-full"></span>
+              </span>
+            </h3>
+
+            <ul className="space-y-3 text-[14px]">
+              {[
+                "About",
+                "Services",
+                "Our Projects",
+                "Meet the Farmers",
+                "Latest News",
+                "Contact",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-2 cursor-pointer group"
+                >
+                  <i className="fa-solid fa-leaf text-white-500 text-[11px] group-hover:scale-110 transition" />
+                  <span className="group-hover:text-green-500 transition">
+                    {item}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
+
+          {/* ===== NEWS ===== */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-gray-400">Email: info@agritech.com</p>
-            <p className="text-gray-400">Phone: +1 234 567 890</p>
+            <h3 className="text-white text-[18px] font-semibold mb-6">
+              News
+              <span className="flex items-center gap-2 mt-2">
+                <span className="w-8 h-[2px] bg-green-500"></span>
+                <span className="w-1 h-1 bg-green-500 rounded-full"></span>
+              </span>
+            </h3>
+
+            <div className="space-y-6 text-[14px]">
+              <div>
+                <p className="text-white leading-6 hover:text-green-500 cursor-pointer transition">
+                  Bringing Food Production
+                  <br />
+                  Back To Cities
+                </p>
+                <span className="text-yellow-500 text-[13px]">
+                  July 5, 2022
+                </span>
+              </div>
+
+              <div>
+                <p className="text-white leading-6 hover:text-green-500 cursor-pointer transition">
+                  The Future of Farming,
+                  <br />
+                  Smart Irrigation Solutions
+                </p>
+                <span className="text-yellow-500 text-[13px]">
+                  July 5, 2022
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-          <p>&copy; 2024 AgriTech. All rights reserved.</p>
+
+          {/* ===== CONTACT ===== */}
+          <div>
+            <h3 className="text-white text-[18px] font-semibold mb-6">
+              Contact
+              <span className="flex items-center gap-2 mt-2">
+                <span className="w-8 h-[2px] bg-green-500"></span>
+                <span className="w-1 h-1 bg-green-500 rounded-full"></span>
+              </span>
+            </h3>
+
+            <ul className="space-y-4 text-[14px]">
+              <li className="flex gap-3">
+                <i className="fa-solid fa-phone text-yellow-500 mt-1" />
+                <span>666 888 0000</span>
+              </li>
+              <li className="flex gap-3">
+                <i className="fa-solid fa-envelope text-yellow-500 mt-1" />
+                <span>needhelp@company.com</span>
+              </li>
+              <li className="flex gap-3">
+                <i className="fa-solid fa-location-dot text-yellow-500 mt-1" />
+                <span>
+                  80 Brooklyn Golden Street Line
+                  <br />
+                  New York, USA
+                </span>
+              </li>
+            </ul>
+
+            {/* Email Input */}
+            <div className="flex mt-6">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className="h-[48px] px-4 w-full bg-white text-[14px] text-gray-700 placeholder-gray-400 outline-none rounded-l-md"
+              />
+              <button className="w-[50px] h-[48px] bg-green-600 flex items-center justify-center rounded-r-md">
+                <i className="fa-solid fa-paper-plane text-white" />
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
-    </footer>
-  )
-}
 
-export default Footer
+      
+      {/* ================= BOTTOM BAR ================= */}
+      <div className="w-full  h-[70px] bg-[#1F1E17]">
+        <div className="max-w-[1200px] mx-auto h-full flex items-center justify-between px-6 text-[13px] text-[#9f9f9f]">
+          <span>© All Copyright 2024 by shawnette Themes</span>
+
+          <div className="flex gap-3">
+            <span className="hover:text-green-500 cursor-pointer transition">
+              Terms of Use
+            </span>
+            <span>|</span>
+            <span className="hover:text-green-500 cursor-pointer transition">
+              Privacy Policy
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+    </footer>
+  );
+};
+
+export default Footer;
