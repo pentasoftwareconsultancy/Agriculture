@@ -1,12 +1,15 @@
 import logo from "../../assets/logow.png";
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 
 const Footer = () => {
   return (
     <footer className="bg-[#24231D] text-[#9f9f9f]">
 
       {/* ================= MAIN FOOTER ================= */}
-      <div className="max-w-[1200px] mx-auto px-6 pt-20 pb-16 ">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-20 pb-16">
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
 
           {/* ===== LOGO + ABOUT ===== */}
@@ -26,18 +29,27 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex items-center gap-4 mt-6">
-              {["twitter", "facebook-f", "pinterest-p", "instagram"].map(
-                (icon) => (
-                  <div
-                    key={icon}
-                    className="w-9 h-9 rounded-full bg-[#2a2a22] flex items-center justify-center cursor-pointer hover:bg-green-600 transition"
-                  >
-                    <i className={`fa-brands fa-${icon} text-white text-sm`} />
-                  </div>
-                )
-              )}
+              {[
+                { icon: "twitter", url: "https://twitter.com/" },
+                { icon: "facebook-f", url: "https://www.facebook.com/" },
+                { icon: "pinterest-p", url: "https://www.pinterest.com/" },
+                { icon: "instagram", url: "https://www.instagram.com/" },
+              ].map(({ icon, url }) => (
+                <a
+                  key={icon}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-[#2a2a22] flex items-center justify-center cursor-pointer hover:bg-green-600 transition"
+                >
+                  <i className={`fa-brands fa-${icon} text-white text-sm`} />
+                </a>
+              ))}
             </div>
+
           </div>
+
+
 
           {/* ===== EXPLORE ===== */}
           <div>
@@ -51,25 +63,28 @@ const Footer = () => {
 
             <ul className="space-y-3 text-[14px]">
               {[
-                "About",
-                "Services",
-                "Our Projects",
-                "Meet the Farmers",
-                "Latest News",
-                "Contact",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-2 cursor-pointer group"
-                >
-                  <i className="fa-solid fa-leaf text-white-500 text-[11px] group-hover:scale-110 transition" />
-                  <span className="group-hover:text-green-500 transition">
-                    {item}
-                  </span>
+                { label: "About", path: "/about" },
+                { label: "Services", path: "/services" },
+                { label: "Our Projects", path: "/projects" },
+                { label: "Meet the Farmers", path: "/" },
+                { label: "Latest News", path: "/news" },
+                { label: "Contact", path: "/contact" },
+              ].map(({ label, path }) => (
+                <li key={label}>
+                  <NavLink
+                    to={path}
+                    className="flex items-center gap-2 cursor-pointer group"
+                  >
+                    <i className="fa-solid fa-leaf text-white-500 text-[11px] group-hover:scale-110 transition" />
+                    <span className="group-hover:text-green-500 transition">
+                      {label}
+                    </span>
+                  </NavLink>
                 </li>
               ))}
             </ul>
           </div>
+
 
           {/* ===== NEWS ===== */}
           <div>
@@ -117,23 +132,46 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-4 text-[14px]">
-              <li className="flex gap-3">
-                <i className="fa-solid fa-phone text-yellow-500 mt-1" />
-                <span>666 888 0000</span>
+              {/* PHONE */}
+              <li>
+                <a
+                  href="tel:6668880000"
+                  className="flex gap-3"
+                >
+                  <i className="fa-solid fa-phone text-yellow-500 mt-1" />
+                  <span>666 888 0000</span>
+                </a>
               </li>
-              <li className="flex gap-3">
-                <i className="fa-solid fa-envelope text-yellow-500 mt-1" />
-                <span>needhelp@company.com</span>
+
+              {/* EMAIL */}
+              <li>
+                <a
+                  href="mailto:needhelp@company.com"
+                  className="flex gap-3"
+                >
+                  <i className="fa-solid fa-envelope text-yellow-500 mt-1" />
+                  <span>needhelp@company.com</span>
+                </a>
               </li>
-              <li className="flex gap-3">
-                <i className="fa-solid fa-location-dot text-yellow-500 mt-1" />
-                <span>
-                  80 Brooklyn Golden Street Line
-                  <br />
-                  New York, USA
-                </span>
+
+              {/* LOCATION */}
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=80+Brooklyn+Golden+Street+Line+New+York+USA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-3"
+                >
+                  <i className="fa-solid fa-location-dot text-yellow-500 mt-1" />
+                  <span>
+                    80 Brooklyn Golden Street Line
+                    <br />
+                    New York, USA
+                  </span>
+                </a>
               </li>
             </ul>
+
 
             {/* Email Input */}
             <div className="flex mt-6">
@@ -151,10 +189,11 @@ const Footer = () => {
         </div>
       </div>
 
-      
+
       {/* ================= BOTTOM BAR ================= */}
       <div className="w-full  h-[70px] bg-[#1F1E17]">
-        <div className="max-w-[1200px] mx-auto h-full flex items-center justify-between px-6 text-[13px] text-[#9f9f9f]">
+        <div className="max-w-[1200px] mx-auto h-full flex flex-col sm:flex-row items-center justify-between px-4 text-[13px] text-[#9f9f9f] gap-2 sm:gap-0">
+
           <span>© All Copyright 2024 by shawnette Themes</span>
 
           <div className="flex gap-3">
