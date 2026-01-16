@@ -1,6 +1,6 @@
 import React from 'react'
-
-import Marketsmall from "../../assets/marketsmall.png"
+import 
+ Marketsmall from "../../assets/marketsmall.png"
 import Marketlarge from "../../assets/marketlarge.png"
 
 function About1() {
@@ -80,11 +80,45 @@ vertical-align: middle; */}
               majority have suffered alteration.
             </p>
 
+
+{/* font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 30px;
+letter-spacing: 0%;
+vertical-align: middle; 
+background: #4BAF47;
+*/}
+
+
+
+
+
+
+
+
             <p className="text-gray-500 mb-6 leading-relaxed">
               There are many variations of passages of lorem ipsum available but
               the majority have suffered alteration in some form by injected
               humor or random word which don’t look even.
             </p>
+
+{/* font-family: Manrope;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 30px;
+letter-spacing: 0%;
+vertical-align: middle;
+background: #878680; */}
+
+
+
+
+
 
             {/* List */}
             <ul className="space-y-3 mb-8">
@@ -102,6 +136,19 @@ vertical-align: middle; */}
               </li>
             </ul>
 
+{/* font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 36px;
+letter-spacing: 0%;
+vertical-align: middle;
+background: #1F1E17; */}
+
+
+
+
             {/* Button */}
             <button className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3 rounded-md font-medium transition">
               Discover More
@@ -112,7 +159,25 @@ vertical-align: middle; */}
       </div>
     </section>
 
-     
+     {/* font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 30px;
+letter-spacing: 0%;
+vertical-align: middle;
+background: #FFFFFF; */}
+
+{/* width: 196.30999755859375;
+height: 60;
+angle: 0 deg;
+opacity: 1;
+border-radius: 10px;
+background: #4BAF47; */}
+
+
+
 
       
     </div>
