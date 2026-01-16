@@ -1,6 +1,7 @@
 import { Search, ShoppingCart } from "lucide-react";
 import logo from "../../assets/logob.png";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -52,14 +53,50 @@ const Navbar = () => {
 
             {/* Menu */}
             <ul className="hidden md:flex items-center gap-8 text-[15px] font-medium text-gray-800">
-              <li className="hover:text-green-600 cursor-pointer">Home</li>
-              <li className="hover:text-green-600 cursor-pointer">About</li>
-              <li className="hover:text-green-600 cursor-pointer">Services</li>
-              <li className="hover:text-green-600 cursor-pointer">Projects</li>
-              <li className="hover:text-green-600 cursor-pointer">News</li>
-              <li className="hover:text-green-600 cursor-pointer">Shop</li>
-              <li className="hover:text-green-600 cursor-pointer">Contact</li>
+              <li>
+                <Link to="/" className="hover:text-green-600 transition">
+                  Home
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/about" className="hover:text-green-600 transition">
+                  About
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/services" className="hover:text-green-600 transition">
+                  Services
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/projects" className="hover:text-green-600 transition">
+                  Projects
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/news" className="hover:text-green-600 transition">
+                  News
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/shop" className="hover:text-green-600 transition">
+                  Shop
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/contact" className="hover:text-green-600 transition">
+                  Contact
+                </Link>
+              </li>
             </ul>
+
+
 
             {/* Icons */}
             <div className="flex items-center gap-6 relative">
