@@ -33,7 +33,7 @@ function LatestProducts() {
             key={product.id}
             className="group bg-[#f7f5ee] rounded-2xl p-8 text-center hover:shadow-xl transition"
           >
-            <div className=" rounded-xl p-6 mb-6">
+            <div className=" rounded-xl p-6">
               <img
                 src={product.img}
                 alt={product.name}
