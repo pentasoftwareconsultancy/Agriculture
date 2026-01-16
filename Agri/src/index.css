@@ -19,6 +19,9 @@
 .font-pacifico {
   font-family: "Pacifico", cursive;
 }
+.font-manrope{
+  font-family: "Manrope",sans-serif;
+}
 body {
   margin: 0;
   padding: 0;

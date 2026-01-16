@@ -18,7 +18,7 @@ function LatestProducts() {
   return (
     <section className="py-50 bg-white">
       
-      <div className="text-center mb-14">
+      <div className="text-center mb-5">
         <p className="text-yellow-400 font-pacifico text-2xl">
           Recently Added
         </p>

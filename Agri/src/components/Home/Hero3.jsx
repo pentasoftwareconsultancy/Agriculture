@@ -13,7 +13,7 @@ function Hero3() {
       ]
     
   return (
-    <div className="mb-20">
+    <div className="mb-15">
       <div className="text-center mb-14">
         <p className="text-yellow-400 font-pacifico text-2xl">Special Offers</p>
         <h2 className="text-5xl font-semibold text-gray-900">
