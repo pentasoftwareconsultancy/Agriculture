@@ -47,7 +47,7 @@ const Navbar = () => {
                 alt="Agrios Logo"
                 className="h-[44px]"
               />
-
+               
             </div>
 
             {/* Menu */}
