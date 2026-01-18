@@ -16,45 +16,43 @@ function LatestProducts() {
   ]
 
   return (
-    <section className="py-50 bg-white">
-      
-      <div className="text-center mb-5">
-        <p className="text-yellow-400 font-pacifico text-2xl">
-          Recently Added
-        </p>
-        <h2 className="text-5xl font-semibold text-gray-900">
-          Latest Products
-        </h2>
-      </div>
+    <section className="py-8 md:py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8 md:mb-12">
+          <p className="text-yellow-400 font-pacifico text-lg md:text-2xl">
+            Recently Added
+          </p>
+          <h2 className="text-2xl md:text-5xl font-semibold text-gray-900">
+            Latest Products
+          </h2>
+        </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="group bg-[#f7f5ee] rounded-2xl p-8 text-center hover:shadow-xl transition"
-          >
-            <div className=" rounded-xl p-6">
-              <img
-                src={product.img}
-                alt={product.name}
-                className=" w-200 h-50 object-cover group-hover:scale-105 transition"
-              />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="bg-[#f7f5ee] rounded-xl md:rounded-2xl p-3 md:p-6 text-center hover:shadow-xl transition"
+            >
+              <div className="mb-3 md:mb-4">
+                <img
+                  src={product.img}
+                  alt={product.name}
+                  className="w-full h-24 md:h-48 object-contain mx-auto transition hover:scale-105"
+                />
+              </div>
+              <h3 className="font-semibold text-gray-900 text-sm md:text-lg mb-1">
+                {product.name}
+              </h3>
+              <p className="text-green-600 text-sm md:text-base mb-2">
+                {product.price}
+              </p>
+              <div className="text-yellow-400 text-sm">
+                ★★★★★
+              </div>
             </div>
-            <h3 className="font-semibold text-gray-900">
-              {product.name}
-            </h3>
-
-            <p className="text-green-600 text-sm mt-1">
-              {product.price}
-            </p>
-
-            <div className="flex justify-center gap-1 mt-2 text-yellow-400 text-sm">
-              ★ ★ ★ ★ ★
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
     </section>
   )
 }
