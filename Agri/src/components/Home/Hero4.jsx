@@ -4,39 +4,49 @@ import farmIcon1 from "../../assets/farmIcon1.png"
 import farmIcon2 from "../../assets/farmIcon2.png"
 function Hero4() {
   return (
-    <div>
-      <div className="flex ml-30 mr-30 mb-15 p-20">
-        <div className="">
-          <img className="w-[600px] h-[500px]" src={Hero4img} />
-        </div>
-        <div className="ml-8">
-          <p className="text-yellow-400 font-pacifico text-[24px]">
-            Quality Products
-          </p>
-          <h2 className="text-5xl font-semibold text-gray-900 text-[48px]">
-            Only Organic Food
-          </h2>
-          <p className="w-[526px] h-[90px] top-[116px] mt-8 mb-8 text-gray-500 text-[18px] leading-[30px] font-manrope">We provide naturally grown farm products that are safe, fresh,<br></br> and rich in nutrition. Every item is carefully cultivated and handled to maintain quality and purity.</p>
-        <div>
-          <div className="flex  w-[545px] h-[100px] top-[249px]">
-            <img src={farmIcon1} className="w-[64px] h-[64px] mr-2" />
-            <div className="ml-2">
-              <h4 className="font-semibold text-[22px] leading-[30px]">Professional Farmers</h4>
-              <p className="text-gray-500 font-manrope text-[16px] leading-[30px]">Expert farmers ensuring quality crops.</p>
-            </div>
-            </div>
-            <div className="flex w-[545px] h-[110px] top-[300px]">
-              <img src={farmIcon2} className="w-[64px] h-[64px] mr-2" />
-            <div className="ml-2">
-              <h4 className="font-semibold text-[20px] leading-[30px]">Solution for Farming</h4>
-              <p className="text-gray-500 font-manrope">Smart solutions for better farming.</p>
-            </div>
+    <section className="py-8 md:py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="order-2 lg:order-1">
+            <img className="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-xl" src={Hero4img} alt="Organic Food" />
           </div>
+          
+          <div className="order-1 lg:order-2 text-center lg:text-left">
+            <p className="text-yellow-400 font-pacifico text-lg md:text-xl lg:text-2xl mb-2">
+              Quality Products
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 md:mb-6">
+              Only Organic Food
+            </h2>
+            <p className="text-gray-500 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 md:mb-8 max-w-lg mx-auto lg:mx-0">
+              We provide naturally grown farm products that are safe, fresh, and rich in nutrition. Every item is carefully cultivated and handled to maintain quality and purity.
+            </p>
+            
+            <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
+              <div className="flex items-start sm:items-center justify-center lg:justify-start">
+                <img src={farmIcon1} className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mr-3 md:mr-4 flex-shrink-0" />
+                <div className="text-center lg:text-left">
+                  <h4 className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl mb-1">Professional Farmers</h4>
+                  <p className="text-gray-500 text-xs sm:text-sm md:text-base">Expert farmers ensuring quality crops.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start sm:items-center justify-center lg:justify-start">
+                <img src={farmIcon2} className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mr-3 md:mr-4 flex-shrink-0" />
+                <div className="text-center lg:text-left">
+                  <h4 className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl mb-1">Solution for Farming</h4>
+                  <p className="text-gray-500 text-xs sm:text-sm md:text-base">Smart solutions for better farming.</p>
+                </div>
+              </div>
+            </div>
+            
+            <button className="bg-green-600 hover:bg-green-700 text-white text-sm md:text-base font-bold rounded-xl px-6 py-3 md:px-8 md:py-4 transition-colors">
+              Start Shopping Now
+            </button>
           </div>
-          <button className="bg-green-600 text-white text-[14px] leading-[30px] font-bold font-manrope rounded-[10px] h-[50px] w-[200px]">Start Shopping Now</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
