@@ -12,7 +12,7 @@ function Hero3() {
       ]
     
   return (
-    <div className="py-8 md:py-16">
+    <div className="py-8 md:py-16 mb-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-14">
           <p className="text-yellow-400 font-pacifico text-lg md:text-2xl">Special Offers</p>
@@ -21,7 +21,7 @@ function Hero3() {
           </h2>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+<div className="grid grid-cols-2 md:grid-cols-4 max-w-6xl mx-auto gap-6 lg:gap-10">
           {items.map((product) => (
             <div
               key={product.id}
@@ -31,7 +31,7 @@ function Hero3() {
                 <img
                   src={product.img}
                   alt={product.name}
-                  className="w-full h-32 md:h-48 lg:h-64 object-cover rounded-xl md:rounded-2xl border border-gray-300 group-hover:scale-105 transition"
+                  className="w-full h-40 md:h-48 lg:h-64 object-cover border border-gray-300 group-hover:scale-105 transition"
                 />
               </div>
               <h3 className="font-semibold text-gray-900 text-sm md:text-base lg:text-lg">
