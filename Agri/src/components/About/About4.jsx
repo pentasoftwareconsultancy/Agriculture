@@ -69,11 +69,11 @@ function About4() {
                 </div>
 
                 {/* White Background Text Area */}
-                <div className="bg-white py-4 pl-8 pr-4 rounded-l-md shadow-lg w-full text-center">
-                  <h3 className="text-xl font-bold text-gray-900 leading-tight">
+                <div className="bg-white py-4 pl-8 pr-4 rounded-l-md shadow-lg w-[180px] text-center">
+                  <h3 className="text-[20px] font-[800] font-[Manrope] text-gray-900 leading-[26px] text-center">
                     {farmer.name}
                   </h3>
-                  <p className="text-gray-500 text-sm font-medium uppercase tracking-wider">
+                  <p className="text-gray-500 text-sm font-[Manrope] font-medium uppercase tracking-wider">
                     {farmer.role}
                   </p>
                 </div>
