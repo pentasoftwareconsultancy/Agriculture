@@ -16,7 +16,7 @@ function LatestProducts() {
   ]
 
   return (
-    <section className="py-8 md:py-20 bg-white">
+    <section className="mt-10 py-8 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
           <p className="text-yellow-400 font-pacifico text-lg md:text-2xl">
@@ -27,11 +27,11 @@ function LatestProducts() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-0 w-[1200px] ml-40 md:gap-8">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-[#f7f5ee] rounded-xl md:rounded-2xl p-3 md:p-6 text-center hover:shadow-xl transition"
+              className="bg-[#f7f5ee] rounded-[10px] md:rounded-2xl p-2 md:p-6 text-center hover:shadow-xl transition"
             >
               <div className="mb-3 md:mb-4">
                 <img

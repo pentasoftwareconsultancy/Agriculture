@@ -9,8 +9,8 @@ function Hero5() {
     <section className="bg-[#fbfaf5]">
       {/* Stats Section */}
       <div className="bg-[#1c1b17] py-6 md:py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center text-gray-300">
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 md:gap-8 text-center text-gray-300">
             <div className="py-2">
               <p className="text-xs sm:text-sm md:text-lg font-medium">Agriculture Products</p>
             </div>
