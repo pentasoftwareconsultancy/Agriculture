@@ -5,6 +5,8 @@ import AboutPage from './pages/AboutPage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import Navbar from './components/navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import NewsGrid from "./components/News/NewsGrid";
+import NewsDetails from "./components/News/NewsDetails";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-<Route path="/services/*" element={<ServicesPage />} />
+            <Route path="/services/*" element={<ServicesPage />} />
+            <Route path="/news" element={<NewsGrid />} />
+            <Route path="/news/:slug" element={<NewsDetails />} />
           </Routes>
         </main>
         <Footer />
