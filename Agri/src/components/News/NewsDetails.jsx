@@ -141,10 +141,10 @@ const NewsDetails = () => {
                 <div className="absolute inset-0 "></div>
                 <div className="relative z-10 text-center">
                     <p className="text-[13px] tracking-[2px] text-white/80 uppercase mb-2">
-                        Home / Latest News
+                        Home / LATEST NEWS
                     </p>
                     <h1 className="text-white text-[48px] font-semibold">
-                        Latest News
+                        LATEST NEWS
                     </h1>
 
                 </div>
