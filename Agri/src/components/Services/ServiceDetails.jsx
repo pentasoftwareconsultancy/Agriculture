@@ -147,9 +147,9 @@ function ServiceDetails() {
                   alt={data.title}
                   className="w-full h-[220px] sm:h-[300px] lg:h-[380px] object-cover rounded-xl"
                 />
-                <div className="absolute bottom-4 right-4 bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center text-white">
+                {/* <div className="absolute bottom-4 right-4 bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center text-white">
                   🌱
-                </div>
+                </div> */}
               </div>
 
               {/* Title */}

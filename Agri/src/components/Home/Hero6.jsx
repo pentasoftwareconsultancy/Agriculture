@@ -15,7 +15,14 @@ function Hero6() {
 
         {/* Header */}
         <div className="text-center mb-8 md:mb-10 lg:mb-12">
-          <p className="text-yellow-400 font-pacifico text-base sm:text-lg md:text-xl">
+          <p className="
+            font-pacifico 
+            text-base 
+            sm:text-lg 
+            md:text-xl 
+            text-yellow-500 
+            md:text-yellow-400
+          ">
             From the Blog
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mt-2">
@@ -24,14 +31,28 @@ function Hero6() {
         </div>
 
         {/* Farmer Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 w-[1100px] h-[400px] ml-20 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-2 mb-8 md:mb-10 lg:mb-12">
+        <div className="
+          grid 
+          grid-cols-1 
+          sm:grid-cols-2 
+          lg:grid-cols-3 
+          gap-6 
+          md:gap-8 
+          lg:gap-2 
+          mb-8 
+          md:mb-10 
+          lg:mb-12
+          w-full
+          lg:w-[1100px]
+          mx-auto
+        ">
           
           {/* Card 1 */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden text-center mx-auto w-full h-[400px] max-w-md">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden text-center mx-auto w-full max-w-md">
             <img
               src={farmer3}
               alt="Ram Shelke"
-              className="w-full h-60 md:h-60 lg:h-70 object-cover"
+              className="w-full h-56 md:h-60 lg:h-70 object-cover"
             />
             <div className="py-4 px-4 relative">
               <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-green-500 w-9 h-9 rounded-full flex items-center justify-center text-white">
@@ -95,7 +116,18 @@ function Hero6() {
               key={index}
               src={img}
               alt={`Farm ${index + 1}`}
-              className="w-full h-28 sm:h-36 md:h-44 lg:h-66 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+              className="
+                w-full 
+                h-28 
+                sm:h-36 
+                md:h-44 
+                lg:h-66 
+                object-cover 
+                rounded-lg 
+                transition-transform 
+                duration-300 
+                hover:scale-105
+              "
             />
           ))}
         </div>
