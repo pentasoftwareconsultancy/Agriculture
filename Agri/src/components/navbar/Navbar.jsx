@@ -14,13 +14,11 @@ const Navbar = () => {
         className="h-[40px] mx-[7.5px] hidden md:block"
         style={{ backgroundColor: "#4BAF47" }}
       >
-
         <div
           className="max-w-[1170px] mx-auto h-full flex items-center justify-between px-4
        text-white text-[12px] font-medium leading-[40px]"
           style={{ fontFamily: "Manrope" }}
         >
-
           {/* LEFT CONTENT */}
           <div className="flex items-center gap-6 -ml-[8px]">
             {/* LOCATION */}
@@ -44,10 +42,8 @@ const Navbar = () => {
             </a>
           </div>
 
-
           {/* RIGHT ICONS — NOW PERFECTLY ALIGNED */}
           <div className="flex items-center gap-[14px] -translate-x-[86px]">
-
             <a
               href="https://twitter.com/"
               target="_blank"
@@ -80,18 +76,13 @@ const Navbar = () => {
               <i className="fa-brands fa-instagram text-[10.5px]" />
             </a>
           </div>
-
         </div>
       </div>
 
-
       {/* ================= MAIN NAVBAR ================= */}
       <nav className="bg-white border-b border-[#FFFFFF19] sticky top-0 z-50">
-
         <div className="max-w-[1170px] mx-auto h-[90px] px-4">
-
           <div className="flex items-center h-full">
-
             {/* LOGO */}
             <div className="flex items-center w-[245.69px]">
               <NavLink to="/">
@@ -101,14 +92,15 @@ const Navbar = () => {
 
             {/* MENU */}
             <ul className="hidden lg:flex items-center justify-center gap-8 w-[701.75px] text-[15px] font-medium">
-
-
               {/* HOME */}
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `flex items-center gap-1 transition ${isActive ? "text-[#0f172a] font-semibold " : "text-gray-400 hover:text-[#0f172a] font-normal"
+                    `flex items-center gap-1 transition ${
+                      isActive
+                        ? "text-[#0f172a] font-semibold "
+                        : "text-gray-400 hover:text-[#0f172a] font-normal"
                     }`
                   }
                 >
@@ -122,7 +114,10 @@ const Navbar = () => {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    `transition ${isActive ? "text-[#0f172a] font-semibold " : "text-gray-400 hover:text-[#0f172a]"
+                    `transition ${
+                      isActive
+                        ? "text-[#0f172a] font-semibold "
+                        : "text-gray-400 hover:text-[#0f172a]"
                     }`
                   }
                 >
@@ -135,7 +130,10 @@ const Navbar = () => {
                 <NavLink
                   to="/services"
                   className={({ isActive }) =>
-                    `flex items-center gap-1 transition ${isActive ? "text-[#0f172a] font-semibold" : "text-gray-400 hover:text-[#0f172a]"
+                    `flex items-center gap-1 transition ${
+                      isActive
+                        ? "text-[#0f172a] font-semibold"
+                        : "text-gray-400 hover:text-[#0f172a]"
                     }`
                   }
                 >
@@ -147,9 +145,12 @@ const Navbar = () => {
               {/* PROJECTS */}
               <li>
                 <NavLink
-                  to="/projects"
+                  to="/Projects"
                   className={({ isActive }) =>
-                    `flex items-center gap-1 transition ${isActive ? "text-[#0f172a] font-semibold" : "text-gray-400 hover:text-[#0f172a]"
+                    `flex items-center gap-1 transition ${
+                      isActive
+                        ? "text-[#0f172a] font-semibold"
+                        : "text-gray-400 hover:text-[#0f172a]"
                     }`
                   }
                 >
@@ -163,7 +164,10 @@ const Navbar = () => {
                 <NavLink
                   to="/news"
                   className={({ isActive }) =>
-                    `flex items-center gap-1 transition ${isActive ? "text-[#0f172a] font-semibold" : "text-gray-400 hover:text-[#0f172a]"
+                    `flex items-center gap-1 transition ${
+                      isActive
+                        ? "text-[#0f172a] font-semibold"
+                        : "text-gray-400 hover:text-[#0f172a]"
                     }`
                   }
                 >
@@ -177,7 +181,10 @@ const Navbar = () => {
                 <NavLink
                   to="/shop"
                   className={({ isActive }) =>
-                    `flex items-center gap-1 transition ${isActive ? "text-[#0f172a] font-semibold" : "text-gray-400 hover:text-[#0f172a]"
+                    `flex items-center gap-1 transition ${
+                      isActive
+                        ? "text-[#0f172a] font-semibold"
+                        : "text-gray-400 hover:text-[#0f172a]"
                     }`
                   }
                 >
@@ -191,7 +198,10 @@ const Navbar = () => {
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
-                    `transition ${isActive ? "text-[#0f172a] font-semibold" : "text-gray-400 hover:text-[#0f172a]"
+                    `transition ${
+                      isActive
+                        ? "text-[#0f172a] font-semibold"
+                        : "text-gray-400 hover:text-[#0f172a]"
                     }`
                   }
                 >
@@ -202,7 +212,6 @@ const Navbar = () => {
 
             {/* DIVIDER */}
             <div className="w-[2px] h-[30px] bg-[#E5E5E5] mx-[12px]" />
-
 
             {/* SEARCH */}
             <div className="flex items-center justify-center w-[48px]">
@@ -216,8 +225,6 @@ const Navbar = () => {
               <NavLink to="/cart">
                 <ShoppingCart className="w-[20px] h-[20px] text-gray-700 hover:text-[#0f172a]" />
               </NavLink>
-
-
             </div>
             {/* MOBILE MENU ICON */}
             <div
@@ -225,19 +232,19 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
             >
               <i
-                className={`fa-solid ${isOpen ? "fa-xmark" : "fa-bars"
-                  } text-xl text-gray-700 cursor-pointer`}
+                className={`fa-solid ${
+                  isOpen ? "fa-xmark" : "fa-bars"
+                } text-xl text-gray-700 cursor-pointer`}
               />
             </div>
-
-
           </div>
         </div>
       </nav>
       {/* ================= MOBILE MENU ================= */}
       <div
-        className={`lg:hidden bg-white shadow-md overflow-hidden transition-all duration-300 ease-out ${isOpen ? "max-h-[500px] py-6 opacity-100" : "max-h-0 opacity-0"
-          }`}
+        className={`lg:hidden bg-white shadow-md overflow-hidden transition-all duration-300 ease-out ${
+          isOpen ? "max-h-[500px] py-6 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <ul className="flex flex-col px-6 text-[16px] font-medium">
           {[
@@ -257,9 +264,10 @@ const Navbar = () => {
                 to={path}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 py-3 transition ${isActive
-                    ? "text-green-600 font-semibold"
-                    : "text-gray-800 hover:text-green-600"
+                  `flex items-center gap-3 py-3 transition ${
+                    isActive
+                      ? "text-green-600 font-semibold"
+                      : "text-gray-800 hover:text-green-600"
                   }`
                 }
               >
@@ -270,10 +278,6 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-
-
-
-
     </>
   );
 };
