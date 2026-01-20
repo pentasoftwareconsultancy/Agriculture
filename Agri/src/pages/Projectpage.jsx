@@ -1,14 +1,15 @@
-import React from 'react'
-import Projects from '../components/Projects/Projects'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Projects from "../components/Projects/Projects";
+import ProjectDetails from "../components/Projects/ProjectDetails";
 
 function Projectpage() {
   return (
-    <div>
-
-        <Projects/>
-      
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Projects />} />
+      <Route path=":projectId" element={<ProjectDetails />} />
+    </Routes>
+  );
 }
 
-export default Projectpage
+export default Projectpage;
