@@ -24,10 +24,14 @@ function App() {
           
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+
+            
             <Route path="/services/*" element={<ServicesPage />} />
+
+            <Route path="/projects/*" element={<ProjectPage />} />
+            
             <Route path="/news" element={<NewsGrid />} />
             <Route path="/news/:slug" element={<NewsDetails />} />
-            <Route path="/Projects" element={<ProjectPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/shop/:productId" element={<ProductDetails />} />
           </Routes>
