@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { newsData } from "./NewsDetails";
-import NewsBanner from "../../assets/NewsBanner.png";
+import NewsBanner from "../../assets/backgroundImgService.png";
 
 
 // EXACT ORDER AS PER IMAGE
@@ -69,7 +69,12 @@ const NewsGrid = () => {
             >
                 <div className="absolute inset-0 "></div>
                 <div className="relative z-10 text-center text-white">
-
+                    <p className="text-[13px] tracking-[2px] text-white/80 uppercase mb-2">
+                        Home / News Grid
+                    </p>
+                    <h1 className="text-white text-[48px] font-semibold">
+                        News Grid
+                    </h1>
                 </div>
             </div>
 
