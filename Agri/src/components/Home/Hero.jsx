@@ -9,18 +9,19 @@ import circle2 from "../../assets/circle2.png";
 function Hero() {
   return (
     <section
-      className="relative h-[90vh] bg-cover bg-center flex items-center"
+      className="relative min-h-screen lg:h-[90vh] bg-cover bg-center flex items-center"
       style={{ backgroundImage: `url(${homeMain})` }}
     >
-      {/* overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* main content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between">
-          {/* text */}
-          <div className="max-w-xl text-white">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+      {/* Main content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+          
+          {/* Text */}
+          <div className="max-w-xl text-white text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
               <span className="text-yellow-400 font-pacifico">
                 Agriculture
               </span>
@@ -30,24 +31,26 @@ function Hero() {
               Market
             </h1>
 
-            <button className="mt-4 px-8 py-3 bg-green-500 hover:bg-green-600 rounded-full text-white text-lg transition">
+            <button className="mt-4 px-6 sm:px-8 py-3 bg-green-500 hover:bg-green-600 rounded-full text-white text-base sm:text-lg transition">
               Shop Now
             </button>
           </div>
 
+          {/* Decorative circles (hide on small screens) */}
           <div className="hidden lg:flex flex-col items-end gap-4">
-            <img src={circle2} className="w-20 h-15" />
-            <img src={circle1} className="w-16 h-12 mr-8" />
+            <img src={circle2} className="w-20" />
+            <img src={circle1} className="w-16 mr-8" />
           </div>
         </div>
       </div>
 
-      <div className="absolute -bottom-10 left-0 right-0 z-20 px-4">
-        <div className="bg-white max-w-4xl h-3xl mx-auto rounded-xl shadow-xl px-10 py-8">
-          <div className="flex flex-col sm:flex-row justify-between gap-4">
-            
+      {/* Bottom info card */}
+      <div className="absolute -bottom-20 sm:-bottom-16 left-0 right-0 z-20 px-4">
+        <div className="bg-white max-w-5xl mx-auto rounded-xl shadow-xl px-6 sm:px-10 py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row justify-between gap-6">
+
             <div className="flex items-center gap-4">
-              <img src={icon} className="w-12 h-12" />
+              <img src={icon} className="w-10 sm:w-12" />
               <div>
                 <h4 className="font-semibold text-gray-800">
                   Return Policy
@@ -59,7 +62,7 @@ function Hero() {
             </div>
 
             <div className="flex items-center gap-4">
-              <img src={icon1} className="w-12 h-12" />
+              <img src={icon1} className="w-10 sm:w-12" />
               <div>
                 <h4 className="font-semibold text-gray-800">
                   Free Shipping
@@ -71,7 +74,7 @@ function Hero() {
             </div>
 
             <div className="flex items-center gap-4">
-              <img src={icon2} className="w-12 h-12" />
+              <img src={icon2} className="w-10 sm:w-12" />
               <div>
                 <h4 className="font-semibold text-gray-800">
                   Store Locator
