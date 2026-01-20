@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaUser, FaComment, FaSearch } from "react-icons/fa";
-
+import { FaTwitter, FaFacebookF, FaPinterestP, FaLinkedinIn } from "react-icons/fa";
 import LatestNews from "../../assets/LatestNews.png";
 
 // images
@@ -11,6 +11,7 @@ import img3 from "../../assets/bringing-food-production-cities.jpg";
 import img4 from "../../assets/future-of-farming-irrigation.jpg";
 import img5 from "../../assets/organic-farming-products.jpg";
 import img6 from "../../assets/winter-wheat-harvest.jpg";
+import backgroundImgService from "../../assets/backgroundImgService.png";
 
 /* DATA */
 export const newsData = [
@@ -20,8 +21,14 @@ export const newsData = [
         title: "Bringing Food Production Back To Cities",
         date: "05 July 2022",
         image: img3,
-        content:
-            "Urban farming helps reduce transportation costs, improves food security and strengthens local communities.",
+        content: `
+Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+
+Urban food production has become increasingly important in modern cities. By integrating farming practices into urban environments, cities can reduce dependency on long supply chains and improve access to fresh, locally grown food. Rooftop gardens, community farms, and vertical agriculture are transforming unused spaces into productive green zones.
+
+Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting. Urban agriculture helps communities reconnect with food sources while promoting sustainability and environmental responsibility.
+`
+
     },
 
     {
@@ -56,8 +63,14 @@ into unchanged.
         title: "Agronomy and relation to Other Sciences",
         date: "05 July 2022",
         image: img2,
-        content:
-            "Agronomy connects agriculture with multiple scientific disciplines to improve productivity.",
+        content: `
+Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+
+Agronomy plays a vital role in connecting agriculture with multiple scientific disciplines such as soil science, biology, chemistry, and environmental science. Through this integration, agronomists are able to improve crop yield, soil health, and long-term sustainability. Scientific research supports better decision-making in modern farming systems.
+
+Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting. Agronomy remains a cornerstone of food security and sustainable agricultural development.
+`
+
     },
 
     {
@@ -66,8 +79,14 @@ into unchanged.
         title: "We grow products with the organic farming",
         date: "05 July 2022",
         image: img5,
-        content:
-            "Organic farming promotes healthier food, soil fertility, and sustainable agriculture.",
+        content: `
+Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+
+Organic farming emphasizes natural processes, biodiversity, and soil health to produce nutritious food without synthetic chemicals. Farmers rely on composting, crop rotation, and biological pest control to maintain ecological balance. These methods help preserve the environment while ensuring food safety.
+
+Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Organic agriculture not only protects ecosystems but also supports healthier lifestyles and sustainable farming communities.
+`
+
     },
 
     {
@@ -76,8 +95,14 @@ into unchanged.
         title: "A Quick Solution to Low Milk Production in Zimbabwe",
         date: "05 July 2022",
         image: img1,
-        content:
-            "Improving milk production using modern agricultural techniques.",
+        content: `
+Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+
+Low milk production remains a challenge for many dairy farmers in Zimbabwe. Factors such as poor nutrition, limited veterinary care, and outdated farming methods contribute to reduced yields. By adopting modern dairy management practices, farmers can significantly improve milk output.
+
+Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Sustainable dairy farming solutions empower local farmers, improve livelihoods, and strengthen the agricultural economy.
+`
+
     },
 
     {
@@ -86,8 +111,14 @@ into unchanged.
         title: "Winter wheat harvest organic gather nice moment",
         date: "05 July 2022",
         image: img6,
-        content:
-            "A beautiful moment during winter wheat harvest.",
+        content: `
+Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+
+Winter wheat harvest represents one of the most rewarding moments for farmers. Months of careful planning, soil preparation, and crop management culminate in a successful harvest. Organic wheat farming ensures that crops are grown using environmentally friendly practices.
+
+Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. These harvest moments celebrate dedication, sustainability, and the timeless relationship between farmers and the land.
+`
+
     },
 
 ];
@@ -105,10 +136,16 @@ const NewsDetails = () => {
             {/* ===== Banner ===== */}
             <div
                 className="relative h-[326px] bg-cover bg-center flex items-center justify-center"
-                style={{ backgroundImage: `url(${LatestNews})` }}
+                style={{ backgroundImage: `url(${backgroundImgService})` }}
             >
                 <div className="absolute inset-0 "></div>
                 <div className="relative z-10 text-center">
+                    <p className="text-[13px] tracking-[2px] text-white/80 uppercase mb-2">
+                        Home / Latest News
+                    </p>
+                    <h1 className="text-white text-[48px] font-semibold">
+                        Latest News
+                    </h1>
 
                 </div>
             </div>
@@ -182,20 +219,49 @@ const NewsDetails = () => {
                             </div>
 
                             {/* Social icons */}
-                            <div className="flex gap-3 text-[#878680]">
-                                <span className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center">
-                                    f
-                                </span>
-                                <span className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center">
-                                    t
-                                </span>
-                                <span className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center">
-                                    p
-                                </span>
-                                <span className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center">
-                                    in
-                                </span>
+                            <div className="flex gap-3">
+                                {/* Twitter */}
+                                <a
+                                    href="https://twitter.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                >
+                                    <FaTwitter size={14} />
+                                </a>
+
+                                {/* Facebook */}
+                                <a
+                                    href="https://facebook.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                >
+                                    <FaFacebookF size={14} />
+                                </a>
+
+                                {/* Pinterest */}
+                                <a
+                                    href="https://pinterest.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                >
+                                    <FaPinterestP size={14} />
+                                </a>
+
+                                {/* LinkedIn */}
+                                <a
+                                    href="https://linkedin.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                >
+                                    <FaLinkedinIn size={14} />
+                                </a>
                             </div>
+
+
                         </div>
 
                         {/* ===== RELATED POSTS ===== */}
@@ -250,38 +316,54 @@ const NewsDetails = () => {
                     </div>
 
                     {/* ===== RIGHT SIDEBAR (370px) ===== */}
-                    <aside className="w-[370px] space-y-8">
+                    {/* ===== RIGHT SIDEBAR ===== */}
+                    <aside className="w-[370px] min-h-[1844.72px] space-y-[30px]">
+
                         {/* Search */}
-                        <div className="bg-[#F4C23D] p-5 rounded-[10px] flex items-center">
+                        {/* ===== Search ===== */}
+                        <div className="w-[370px] h-[86px] bg-[#F4C23D] rounded-[10px] flex items-center px-6">
                             <input
                                 type="text"
                                 placeholder="Search here..."
-                                className="flex-1 bg-transparent outline-none text-white placeholder-white"
+                                className="flex-1 bg-transparent outline-none text-white placeholder-white text-[14px]"
                             />
-                            <FaSearch className="text-white text-lg" />
+                            <FaSearch className="text-white text-[18px]" />
                         </div>
 
-                        {/* Latest Posts */}
-                        <div className="bg-[#F7F6F1] p-6 rounded-[10px]">
-                            <h4 className="font-bold mb-4">Latest Posts</h4>
+
+                        {/* ===== Latest Posts ===== */}
+                        <div className="w-[370px] h-[453.36px] bg-[#F7F6F1] rounded-[10px] p-6">
+                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-5">
+                                Latest Posts
+                            </h4>
+
                             {newsData.slice(0, 3).map((item) => (
                                 <Link
                                     key={item.id}
                                     to={`/news/${item.slug}`}
-                                    className="flex gap-3 mb-4"
+                                    className="flex gap-4 mb-5 last:mb-0"
                                 >
                                     <img
                                         src={item.image}
-                                        alt=""
-                                        className="w-[60px] h-[60px] object-cover rounded"
+                                        alt={item.title}
+                                        className="w-[70px] h-[70px] object-cover rounded-[8px]"
                                     />
-                                    <p className="text-[14px] font-medium">{item.title}</p>
+
+                                    <div>
+                                        <p className="text-[12px] text-[#878680] mb-1">
+                                            by Kevin Martin
+                                        </p>
+                                        <p className="text-[14px] font-medium leading-[20px] text-[#1F1E17]">
+                                            {item.title}
+                                        </p>
+                                    </div>
                                 </Link>
                             ))}
                         </div>
-                        {/* ===== CATEGORIES ===== */}
-                        <div className="bg-[#F8F7F0] p-6 rounded-[10px]">
-                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-4">
+
+                        {/* ===== Categories ===== */}
+                        <div className="w-[370px] h-[396px] bg-[#F7F6F1] rounded-[10px] p-6">
+                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-5">
                                 Categories
                             </h4>
 
@@ -295,30 +377,27 @@ const NewsDetails = () => {
                             </ul>
                         </div>
 
-                        {/* ===== TAGS ===== */}
-                        <div className="bg-[#F8F7F0] p-6 rounded-[10px]">
-                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-4">
+
+                        {/* ===== Tags ===== */}
+                        <div className="w-[370px] h-[276px] bg-[#F7F6F1] rounded-[10px] p-6">
+                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-5">
                                 Tags
                             </h4>
 
                             <div className="flex flex-wrap gap-3">
-                                <span className="px-4 py-1 bg-white text-[13px] rounded-full">
-                                    Agriculture
-                                </span>
-                                <span className="px-4 py-1 bg-white text-[13px] rounded-full">
-                                    Farming
-                                </span>
-                                <span className="px-4 py-1 bg-white text-[13px] rounded-full">
-                                    Harvest
-                                </span>
-                                <span className="px-4 py-1 bg-white text-[13px] rounded-full">
-                                    Organic
-                                </span>
-                                <span className="px-4 py-1 bg-white text-[13px] rounded-full">
-                                    Vegetables
-                                </span>
+                                {["Agriculture", "Farming", "Harvest", "Organic", "Vegetables"].map(
+                                    (tag) => (
+                                        <span
+                                            key={tag}
+                                            className="px-4 py-2 bg-white border border-[#E5E5E5] rounded-full text-[13px] text-[#1F1E17]"
+                                        >
+                                            {tag}
+                                        </span>
+                                    )
+                                )}
                             </div>
                         </div>
+
 
 
                     </aside>
