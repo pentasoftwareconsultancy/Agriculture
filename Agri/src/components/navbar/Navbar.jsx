@@ -147,7 +147,7 @@ const Navbar = () => {
               {/* PROJECTS */}
               <li>
                 <NavLink
-                  to="/projects"
+                  to="/Projects"
                   className={({ isActive }) =>
                     `flex items-center gap-1 transition ${isActive ? "text-[#0f172a] font-semibold" : "text-gray-400 hover:text-[#0f172a]"
                     }`
