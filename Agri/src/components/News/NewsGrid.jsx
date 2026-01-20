@@ -70,10 +70,10 @@ const NewsGrid = () => {
                 <div className="absolute inset-0 "></div>
                 <div className="relative z-10 text-center text-white">
                     <p className="text-[13px] tracking-[2px] text-white/80 uppercase mb-2">
-                        Home / News Grid
+                        Home / NEWS GRID
                     </p>
                     <h1 className="text-white text-[48px] font-semibold">
-                        News Grid
+                        NEWS GRID
                     </h1>
                 </div>
             </div>
