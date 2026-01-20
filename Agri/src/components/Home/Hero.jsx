@@ -36,8 +36,8 @@ function Hero() {
           </div>
 
           <div className="hidden lg:flex flex-col items-end gap-4">
-            <img src={circle2} className="w-25 h-20" />
-            <img src={circle1} className="w-20 h-16 mr-8" />
+            <img src={circle2} className="w-20 h-15" />
+            <img src={circle1} className="w-16 h-12 mr-8" />
           </div>
         </div>
       </div>
