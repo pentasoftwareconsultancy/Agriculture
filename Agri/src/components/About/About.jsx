@@ -14,7 +14,7 @@ function About() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 "></div>
 
         {/* Center Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 font-manrope">
