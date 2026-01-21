@@ -21,7 +21,7 @@ function Contact() {
             HOME / CONTACT
           </p>
           <h2 className="text-white text-[32px] sm:text-[40px] md:text-[48px] font-semibold">
-            CONTACT
+            CONTACT US
           </h2>
         </div>
       </div>
@@ -32,18 +32,18 @@ function Contact() {
 
           <div className="w-full max-w-[399.98px] h-[220px] bg-[#55B84F] rounded-2xl p-8 mx-auto">
             <h3 className="font-['Covered_By_Your_Grace'] text-[30px] leading-[45px] text-white mb-4">
-              About
+              About Us
             </h3>
             <p className="font-manrope text-[16px] leading-[30px] text-white">
-              Lorem ipsum is simply free text <br />
-              used by copytyping refreshing. <br />
-              Neque porro est qui
+              We provide premium agricultural <br />
+              solutions tailored to your needs. <br />
+              Quality and trust in every step.
             </p>
           </div>
 
           <div className="w-full max-w-[399.98px] h-[220px] bg-[#C6D33C] rounded-2xl p-8 mx-auto">
             <h3 className="font-['Covered_By_Your_Grace'] text-[30px] leading-[45px] text-white mb-4">
-              Contact
+              Contact Info
             </h3>
             <p className="font-manrope text-[16px] leading-[30px] text-white">
               +1-(246) 333-0079 <br />
@@ -54,12 +54,12 @@ function Contact() {
 
           <div className="w-full max-w-[399.98px] h-[220px] bg-[#F2C94C] rounded-2xl p-8 mx-auto">
             <h3 className="font-['Covered_By_Your_Grace'] text-[30px] leading-[45px] text-white mb-4">
-              Address
+              Our Address
             </h3>
             <p className="font-manrope text-[16px] leading-[30px] text-white">
-              66 Brooklyn Road Golden Street, <br />
-              New York United States of <br />
-              America
+              66 Brooklyn Road, Golden Street, <br />
+              New York, NY 10001, <br />
+              United States of America
             </p>
           </div>
 
@@ -74,7 +74,7 @@ function Contact() {
           <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
             <iframe
               title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15126.25945751468!2d73.7923639!3d18.5936463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b91b0dd95daf%3A0xa6cb6e3796a09978!2sPimple%20Saudagar%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.422199126435!2d-73.9873196845939!3d40.75102877932759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a145!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1646734567890!5m2!1sen!2sus"
               className="w-full h-full border-0"
               loading="lazy"
             />
@@ -102,7 +102,7 @@ function Contact() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder="Full Name"
                   className="w-full sm:w-1/2 px-4 py-3 rounded-md outline-none text-sm bg-white"
                 />
                 <input
@@ -113,7 +113,7 @@ function Contact() {
               </div>
 
               <textarea
-                placeholder="Write a Message"
+                placeholder="Enter your message here..."
                 rows="4"
                 className="px-4 py-3 rounded-md outline-none text-sm resize-none bg-white"
               />
@@ -122,7 +122,7 @@ function Contact() {
                 type="submit"
                 className="bg-[#55B84F] font-manrope text-white px-8 py-3 rounded-md w-fit hover:bg-green-600 transition"
               >
-                Send a Message
+                Send Message
               </button>
             </form>
           </div>
