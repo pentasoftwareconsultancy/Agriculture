@@ -7,7 +7,7 @@ function Contact() {
     <div>
 
       {/* ================= HERO SECTION ================= */}
-      <div className="relative w-full h-[220px] sm:h-[260px] md:h-[326px]">
+      <div className="relative w-full h-[220px] sm:h-[260px] md:h-[326px] mb-[22px]">
         <img
           src={backgroundImage}
           className="w-full h-full object-cover"
@@ -27,10 +27,9 @@ function Contact() {
       </div>
 
       {/* ================= INFO CARDS ================= */}
-      <div className="w-full flex justify-center py-16 px-4">
+      <div className="w-full flex justify-center py-16 px-4 mb-[22px]">
         <div className="max-w-[1200px] w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {/* ABOUT CARD */}
           <div className="w-full max-w-[399.98px] h-[220px] bg-[#55B84F] rounded-2xl p-8 mx-auto">
             <h3 className="font-['Covered_By_Your_Grace'] text-[30px] leading-[45px] text-white mb-4">
               About
@@ -42,7 +41,6 @@ function Contact() {
             </p>
           </div>
 
-          {/* CONTACT CARD */}
           <div className="w-full max-w-[399.98px] h-[220px] bg-[#C6D33C] rounded-2xl p-8 mx-auto">
             <h3 className="font-['Covered_By_Your_Grace'] text-[30px] leading-[45px] text-white mb-4">
               Contact
@@ -54,7 +52,6 @@ function Contact() {
             </p>
           </div>
 
-          {/* ADDRESS CARD */}
           <div className="w-full max-w-[399.98px] h-[220px] bg-[#F2C94C] rounded-2xl p-8 mx-auto">
             <h3 className="font-['Covered_By_Your_Grace'] text-[30px] leading-[45px] text-white mb-4">
               Address
@@ -70,19 +67,17 @@ function Contact() {
       </div>
 
       {/* ================= MAP + FORM ================= */}
-      <section className="w-full flex justify-center py-16 px-4 bg-white">
+      <section className="w-full flex justify-center px-4 bg-white mb-[100px]">
         <div className="max-w-[1200px] w-full grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden shadow-lg">
 
           {/* MAP */}
           <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
             <iframe
-  title="Google Map"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15126.25945751468!2d73.7923639!3d18.5936463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b91b0dd95daf%3A0xa6cb6e3796a09978!2sPimple%20Saudagar%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
-  className="w-full h-full border-0"
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
-
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15126.25945751468!2d73.7923639!3d18.5936463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b91b0dd95daf%3A0xa6cb6e3796a09978!2sPimple%20Saudagar%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+              className="w-full h-full border-0"
+              loading="lazy"
+            />
           </div>
 
           {/* FORM */}
