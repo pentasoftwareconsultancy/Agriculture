@@ -8,7 +8,7 @@ function ProjectHero({ breadcrumb, title }) {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 "></div>
 
       {/* Text */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 font-manrope">
