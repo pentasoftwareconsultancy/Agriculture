@@ -8,16 +8,16 @@ function About3() {
     {
       id: 1,
       name: "Bonnie Tolbet",
-      role: "Customer",
+      role: "Verified Customer",
       image: Customer1,
-      text: "There are many variations of passage of available but the majority have suffered alteration in some form by injected humor or randomized.",
+      text: "The quality of the organic produce is outstanding. I’ve noticed a real difference in freshness compared to my local grocery store.",
     },
     {
       id: 2,
       name: "Sarah Albert",
-      role: "Customer",
+      role: "Verified Customer",
       image: Customer2,
-      text: "There are many variations of passage of available but the majority have suffered alteration in some form by injected humor or randomized.",
+      text: "Exceptional service and timely delivery. It’s rare to find a marketplace that genuinely cares about both the farmers and the consumers.",
     },
   ];
 
@@ -53,7 +53,7 @@ function About3() {
             text-gray-900
           "
         >
-          What They Say
+          What Our Customers Say
         </h2>
 
         {/* Cards Container */}
@@ -121,8 +121,7 @@ function About3() {
                       text-gray-900
                       leading-[26px]
                       text-center
-                      md:text-right
-                      md:ml-40
+                      md:text-left
                     "
                   >
                     {item.name}
@@ -136,8 +135,7 @@ function About3() {
                       text-gray-400
                       leading-[26px]
                       text-center
-                      md:text-right
-                      md:ml-40
+                      md:text-left
                     "
                   >
                     {item.role}

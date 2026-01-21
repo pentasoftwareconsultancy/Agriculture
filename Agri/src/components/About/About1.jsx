@@ -53,7 +53,7 @@ function About1() {
               {/* Small Overlay Image */}
               <img
                 src={Marketsmall}
-                alt="Farmer"
+                alt="Farmer working"
                 className="
                   absolute
                   w-[220px]
@@ -92,33 +92,33 @@ function About1() {
               </p>
 
               <h2 className="font-manrope font-extrabold text-[36px] md:text-[48px] leading-[44px] md:leading-[57.6px] text-gray-900 mb-6">
-                The Best Agriculture <br className="hidden md:block" /> Market
+                The Leading Global <br className="hidden md:block" /> Agriculture Market
               </h2>
 
               <p className="font-manrope font-bold text-[18px] md:text-[20px] leading-[30px] text-[#4BAF47] mb-4">
-                There are many variations of passa of lorem available, but the
-                majority have suffered alteration.
+                We provide high-quality organic products sourced directly from 
+                sustainable farms worldwide.
               </p>
 
               <p className="font-manrope font-medium text-[15px] md:text-[16px] leading-[28px] md:leading-[30px] text-[#878680] mb-6">
-                There are many variations of passages of lorem ipsum available
-                but the majority have suffered alteration in some form by
-                injected humor or random word which don’t look even.
+                Our mission is to bridge the gap between farmers and consumers by 
+                offering a transparent marketplace. We ensure that every product 
+                meets the highest standards of freshness and nutritional value.
               </p>
 
               {/* LIST */}
               <ul className="space-y-3 mb-8">
                 <li className="font-manrope font-bold text-[17px] md:text-[18px] leading-[32px] md:leading-[36px] text-[#1F1E17] flex items-center gap-3 justify-center lg:justify-start">
                   <span className="text-lime-600 text-lg">✔</span>
-                  Suspe ndisse suscipit sagittis leo
+                  Sustainably sourced organic produce
                 </li>
                 <li className="font-manrope font-bold text-[17px] md:text-[18px] leading-[32px] md:leading-[36px] text-[#1F1E17] flex items-center gap-3 justify-center lg:justify-start">
                   <span className="text-lime-600 text-lg">✔</span>
-                  Entum vestibulum dignissim posuere
+                  Direct distribution from farm to table
                 </li>
                 <li className="font-manrope font-bold text-[17px] md:text-[18px] leading-[32px] md:leading-[36px] text-[#1F1E17] flex items-center gap-3 justify-center lg:justify-start">
                   <span className="text-lime-600 text-lg">✔</span>
-                  Lorem ipsum on the tend to repeat
+                  Certified quality and safety standards
                 </li>
               </ul>
 
