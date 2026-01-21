@@ -105,7 +105,6 @@ const Navbar = () => {
                   }
                 >
                   Home
-                  <i className="fa-solid fa-angle-down text-[11px] translate-y-[1px]" />
                 </NavLink>
               </li>
 
@@ -138,7 +137,6 @@ const Navbar = () => {
                   }
                 >
                   Services
-                  <i className="fa-solid fa-angle-down text-[11px] translate-y-[1px]" />
                 </NavLink>
               </li>
 
@@ -155,7 +153,6 @@ const Navbar = () => {
                   }
                 >
                   Projects
-                  <i className="fa-solid fa-angle-down text-[11px] translate-y-[1px]" />
                 </NavLink>
               </li>
 
@@ -172,7 +169,6 @@ const Navbar = () => {
                   }
                 >
                   News
-                  <i className="fa-solid fa-angle-down text-[11px] translate-y-[1px]" />
                 </NavLink>
               </li>
 
@@ -189,7 +185,6 @@ const Navbar = () => {
                   }
                 >
                   Shop
-                  <i className="fa-solid fa-angle-down text-[11px] translate-y-[1px]" />
                 </NavLink>
               </li>
 
