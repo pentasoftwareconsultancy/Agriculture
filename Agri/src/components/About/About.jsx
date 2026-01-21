@@ -1,23 +1,34 @@
-import React from 'react'
-import Frame from "../../assets/Frame.png";
+import React from "react";
+import backgroundImage from "../../assets/backgroundImgService.png";
+
 function About() {
   return (
-    <div className="w-[1920] h-[326.25]  top-[178.5px] opacity-100 ">  
-      
-      <img src={Frame} alt="About_Frame" />
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-        </div> 
-  
-  )
+    <div className="w-full">
+
+      {/* ================= HERO SECTION ================= */}
+      <div className="relative w-full h-[220px] sm:h-[260px] md:h-[326px]">
+        <img
+          src={backgroundImage}
+          className="w-full h-full object-cover"
+          alt="background"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Center Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 font-manrope">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-white/80 mb-2">
+            HOME / ABOUT
+          </p>
+          <h2 className="text-white text-[28px] sm:text-[36px] md:text-[48px] font-extrabold leading-[36px] md:leading-[58px]">
+            ABOUT
+          </h2>
+        </div>
+      </div>
+
+    </div>
+  );
 }
 
-export default About
+export default About;

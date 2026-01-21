@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Project1 from "../../assets/Project1.png";
 
+import backgroundImage from "../../assets/backgroundImgService.png";
 import Project2 from "../../assets/Project2.jpg";
 import Project3 from "../../assets/Project3.jpg";
 import Project4 from "../../assets/Project4.jpg";
@@ -22,37 +22,58 @@ function Projects() {
   return (
     <div>
 
-      {/* HERO */}
-      <div className="w-full h-[326px]">
-        <img src={Project1} className="w-full h-full object-cover" />
+      {/* ================= HERO SECTION ================= */}
+      <div className="relative w-full h-[220px] sm:h-[260px] md:h-[326px]">
+        <img
+          src={backgroundImage}
+          className="w-full h-full object-cover"
+          alt="background"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Center Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 font-manrope">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-white/80 mb-2">
+            HOME / PROJECT
+          </p>
+          <h2 className="text-white text-[28px] sm:text-[36px] md:text-[48px] font-extrabold leading-[36px] md:leading-[58px]">
+            PROJECT
+          </h2>
+        </div>
       </div>
 
-      {/* CARDS */}
-      <div className="w-[1170px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-30 pb-40">
-  {projects.map((item) => (
-    <Link
-      key={item.id}
-      to={`/projects/${item.id}`}
-      className="relative h-[380px] w-[370px] rounded-xl overflow-hidden group"
-    >
-      <img
-        src={item.image}
-        alt={item.title}
-        className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-      />
+      {/* ================= PROJECT CARDS ================= */}
+      <div className="max-w-[1170px] mx-auto px-4 sm:px-6 lg:px-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 py-20 pb-32">
 
-      <div className="absolute inset-0 bg-black/40"></div>
+        {projects.map((item) => (
+          <Link
+            key={item.id}
+            to={`/projects/${item.id}`}
+            className="relative w-full h-[320px] sm:h-[360px] lg:h-[380px] rounded-xl overflow-hidden group"
+          >
+            {/* Image */}
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
 
-      <div className="absolute bottom-10 left-8 text-white">
-        <h3 className="text-[26px] font-extrabold leading-[32px]">
-          {item.title.split(" ")[0]} <br />
-          {item.title.split(" ").slice(1).join(" ")}
-        </h3>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/40"></div>
+
+            {/* Title */}
+            <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 text-white">
+              <h3 className="font-manrope font-bold text-[22px] sm:text-[26px] lg:text-[30px] h-[72px] leading-[32px] lg:leading-[36px] tracking-normal">
+                {item.title.split(" ")[0]} <br />
+                {item.title.split(" ").slice(1).join(" ")}
+              </h3>
+            </div>
+          </Link>
+        ))}
+
       </div>
-    </Link>
-  ))}
-</div>
-
 
     </div>
   );
