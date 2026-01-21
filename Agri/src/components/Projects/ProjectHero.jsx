@@ -4,19 +4,19 @@ import backgroundImage from "../../assets/backgroundImgService.png";
 function ProjectHero({ breadcrumb, title }) {
   return (
     <div
-      className="relative w-full h-[260px] sm:h-[300px] md:h-[326px] bg-cover bg-center"
+      className="relative w-full h-[220px] sm:h-[260px] md:h-[326px] bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* text */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-        <p className="text-sm tracking-widest uppercase mb-2">
+      {/* Text */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 font-manrope">
+        <p className="text-xs sm:text-sm tracking-widest uppercase mb-2 text-white/80">
           {breadcrumb}
         </p>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase">
+        <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-extrabold uppercase leading-tight">
           {title}
         </h1>
       </div>

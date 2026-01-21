@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import ProjectHero from "./ProjectHero";
 import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram } from "react-icons/fa";
 
-
 // images
 import Project3 from "../../assets/Project3.jpg";
 import Project7 from "../../assets/Project7.jpg";
@@ -44,7 +43,7 @@ function ProjectDetails() {
       title: "Agriculture Farming",
       image: Project7,
       description:
-       "Agriculture Farming focuses on sustainable crop production using advanced farming practices. This project includes soil management, crop rotation, and smart irrigation techniques to improve yield while maintaining long-term soil fertility and environmental balance.",
+        "Agriculture Farming focuses on sustainable crop production using advanced farming practices. This project includes soil management, crop rotation, and smart irrigation techniques to improve yield while maintaining long-term soil fertility and environmental balance.",
       services: "Crop Management",
       farmer: "Mr. Sunil Patil",
       duration: "4 Months",
@@ -91,7 +90,7 @@ function ProjectDetails() {
       title: "Organic Solutions",
       image: Project2,
       description:
-       " Organic Solutions focus on chemical-free farming to produce safer and healthier food. This project emphasizes natural fertilizers, composting, and organic pest control methods to improve soil health and support sustainable agriculture",
+        "Organic Solutions focus on chemical-free farming to produce safer and healthier food. This project emphasizes natural fertilizers, composting, and organic pest control methods to improve soil health and support sustainable agriculture",
       services: "Organic Farming",
       farmer: "Mr. Amit Desai",
       duration: "5 Months",
@@ -162,16 +161,13 @@ function ProjectDetails() {
 
   return (
     <div>
-      <ProjectHero
-        breadcrumb={`Project / ${data.title}`}
-        title={data.title}
-      />
+      <ProjectHero breadcrumb={`Project / ${data.title}`} title={data.title} />
 
       {/* CONTENT */}
-      <div className="max-w-[1200px] mx-auto px-6 py-12">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-12">
 
         {/* HERO IMAGE */}
-        <div className="relative w-full h-[450px] mb-12 overflow-hidden rounded-2xl shadow-xl">
+        <div className="relative w-full h-[260px] sm:h-[360px] lg:h-[450px] mb-10 overflow-hidden rounded-2xl shadow-xl">
           <img
             src={data.image}
             alt={data.title}
@@ -180,35 +176,41 @@ function ProjectDetails() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-10">
 
           {/* LEFT CONTENT */}
-          <div className="lg:w-2/3 space-y-10">
+          <div className="lg:w-2/3 space-y-8">
 
             <header>
               <p className="text-green-600 text-xs font-bold uppercase tracking-widest">
                 Project Case Study
               </p>
-              <h2 className="text-4xl font-extrabold mt-2">{data.title}</h2>
+              <h2 className="font-manrope font-extrabold text-[30px] leading-[42px] tracking-normal mt-2">
+                {data.title}
+              </h2>
             </header>
 
-            <p className="text-gray-600 leading-relaxed border-l-4 border-green-500 pl-6">
+            <p className="font-manrope font-medium text-[16px] leading-[30px] tracking-normal text-gray-600 border-l-4 border-green-500 pl-6">
               {data.description}
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 p-8 rounded-2xl">
-                <h3 className="font-bold text-lg mb-4">Challenges</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl">
+                <h3 className="font-manrope font-bold text-[20px] leading-[26px] mb-4">
+                  Challenges
+                </h3>
+                <ul className="font-manrope font-medium text-[16px] leading-[30px] text-gray-600">
                   {data.challenges.map((item, i) => (
                     <li key={i}>• {item}</li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-green-50 p-8 rounded-2xl">
-                <h3 className="font-bold text-lg mb-4">Solutions</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
+              <div className="bg-green-50 p-6 sm:p-8 rounded-2xl">
+                <h3 className="font-manrope font-bold text-[20px] leading-[26px] mb-4">
+                  Solutions
+                </h3>
+                <ul className="font-manrope font-medium text-[16px] leading-[30px] text-gray-600">
                   {data.solutions.map((item, i) => (
                     <li key={i}>• {item}</li>
                   ))}
@@ -217,20 +219,19 @@ function ProjectDetails() {
             </div>
 
             {/* PROJECT IMPACT */}
-          <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-lg">
-             <h3 className="text-lg font-semibold text-green-700 mb-2">
-               Project Impact
-            </h3>
-           <p className="text-gray-700 leading-relaxed">
-             {data.impact}
-            </p>
-           </div>
-
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-lg">
+              <h3 className="font-manrope font-bold text-[26px] leading-[26px] text-green-700 mb-4">
+                Project Impact
+              </h3>
+              <p className="font-manrope font-medium text-[16px] leading-[30px] text-gray-600">
+                {data.impact}
+              </p>
+            </div>
           </div>
 
           {/* RIGHT CARD */}
           <div className="lg:w-1/3">
-            <div className="sticky top-28 bg-white rounded-3xl border shadow-lg overflow-hidden">
+            <div className="sticky top-24 bg-white rounded-3xl border shadow-lg overflow-hidden">
 
               <div className="bg-gray-900 text-white p-5 text-center">
                 <p className="text-xs uppercase tracking-widest text-gray-400">
@@ -244,45 +245,18 @@ function ProjectDetails() {
                 <InfoItem icon="👨‍🌾" label="Farmer" value={data.farmer} />
                 <InfoItem icon="⏳" label="Duration" value={data.duration} />
                 <InfoItem icon="📍" label="Location" value={data.location} />
+              </div>
 
-                {/* ICONS SECTION */}
-<div className="p-6 border-t bg-gray-50">
-  <div className="flex justify-center gap-4">
-    <a
-      href="#"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-gray-100 transition"
-    >
-      <FaTwitter className="text-gray-700" />
-    </a>
-
-    <a
-      href="#"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-gray-100 transition"
-    >
-      <FaFacebookF className="text-gray-700" />
-    </a>
-
-    <a
-      href="#"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-gray-100 transition"
-    >
-      <FaPinterestP className="text-gray-700" />
-    </a>
-
-    <a
-      href="#"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-gray-100 transition"
-    >
-      <FaInstagram className="text-gray-700" />
-    </a>
-  </div>
-</div>
-
+              {/* ICONS */}
+              <div className="p-6 border-t bg-gray-50 flex justify-center gap-4">
+                <Icon><FaTwitter /></Icon>
+                <Icon><FaFacebookF /></Icon>
+                <Icon><FaPinterestP /></Icon>
+                <Icon><FaInstagram /></Icon>
               </div>
 
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -302,6 +276,15 @@ const InfoItem = ({ icon, label, value }) => (
       <p className="font-semibold text-gray-900">{value}</p>
     </div>
   </div>
+);
+
+const Icon = ({ children }) => (
+  <a
+    href="#"
+    className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-gray-100 transition text-gray-700"
+  >
+    {children}
+  </a>
 );
 
 export default ProjectDetails;
