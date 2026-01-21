@@ -40,7 +40,7 @@ function ServiceHero({ title, breadcrumb, bgImage }) {
             md:text-4xl
             lg:text-5xl
             font-extrabold
-            uppercase
+            
             leading-tight
           "
         >

@@ -16,9 +16,11 @@ import ProjectPage from "./pages/Projectpage.jsx";
 
 
 import ShopPage from "./pages/ShopPage.jsx";
+import ScrollToTop from './components/ScrollToTop.jsx'
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="grow">
