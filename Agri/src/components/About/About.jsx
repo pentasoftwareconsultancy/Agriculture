@@ -21,7 +21,7 @@ function About() {
           <p className="text-xs sm:text-sm uppercase tracking-widest text-white/80 mb-2">
             HOME / ABOUT
           </p>
-          <h2 className="text-white text-[28px] sm:text-[36px] md:text-[48px] font-extrabold leading-[36px] md:leading-[58px]">
+          <h2 className="text-white text-[48px] font-semibold">
             ABOUT
           </h2>
         </div>
