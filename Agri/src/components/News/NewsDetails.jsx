@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+
 import { useParams, Link } from "react-router-dom";
 import { FaUser, FaComment, FaSearch } from "react-icons/fa";
 import { FaTwitter, FaFacebookF, FaPinterestP, FaLinkedinIn } from "react-icons/fa";
@@ -21,14 +23,9 @@ export const newsData = [
         title: "Bringing Food Production Back To Cities",
         date: "05 July 2022",
         image: img3,
-        content: `
-Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
-
-Urban food production has become increasingly important in modern cities. By integrating farming practices into urban environments, cities can reduce dependency on long supply chains and improve access to fresh, locally grown food. Rooftop gardens, community farms, and vertical agriculture are transforming unused spaces into productive green zones.
-
-Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting. Urban agriculture helps communities reconnect with food sources while promoting sustainability and environmental responsibility.
-`
-
+        content: `Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    Urban food production has become increasingly important in modern cities. By integrating farming practices into urban environments, cities can reduce dependency on long supply chains and improve access to fresh, locally grown food. Rooftop gardens, community farms, and vertical agriculture are transforming unused spaces into productive green zones.
+                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting. Urban agriculture helps communities reconnect with food sources while promoting sustainability and environmental responsibility.`
     },
 
     {
@@ -37,24 +34,22 @@ Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, 
         title: "The Future of Farming, Smart Irrigation Solutions",
         date: "05 July 2022",
         image: img4,
-        content: `
-Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of
-passages of Lorem Ipsum available, but the majority have alteration in some injected or words which
-don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
-sure there isn’t anything embarrang hidden in the middle of text. All the Lorem Ipsum generators on the
-Internet tend to repeat predefined chunks as necessary, making this the first true generator on the
-Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
-structures, to generate Lorem Ipsum which looks reasonable.
+        content: `Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of
+                    passages of Lorem Ipsum available, but the majority have alteration in some injected or words which
+                    don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be
+                    sure there isn’t anything embarrang hidden in the middle of text. All the Lorem Ipsum generators on the
+                    Internet tend to repeat predefined chunks as necessary, making this the first true generator on the
+                    Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable.
 
-Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown
-printer took a galley of type and scrambled it to make a type simen book. It has survived not only five
-centuries, but also the leap into electronic typesetting.
+                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type simen book. It has survived not only five
+                    centuries, but also the leap into electronic typesetting.
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-industry’s standard dummy text ever since the when an unknown printer took a galley of type and
-scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-into unchanged.
-    `,
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry’s standard dummy text ever since the when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                    into unchanged.`,
     },
 
     {
@@ -63,14 +58,9 @@ into unchanged.
         title: "Agronomy and relation to Other Sciences",
         date: "05 July 2022",
         image: img2,
-        content: `
-Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
-
-Agronomy plays a vital role in connecting agriculture with multiple scientific disciplines such as soil science, biology, chemistry, and environmental science. Through this integration, agronomists are able to improve crop yield, soil health, and long-term sustainability. Scientific research supports better decision-making in modern farming systems.
-
-Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting. Agronomy remains a cornerstone of food security and sustainable agricultural development.
-`
-
+        content: `Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+                    Agronomy plays a vital role in connecting agriculture with multiple scientific disciplines such as soil science, biology, chemistry, and environmental science. Through this integration, agronomists are able to improve crop yield, soil health, and long-term sustainability. Scientific research supports better decision-making in modern farming systems.
+                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting. Agronomy remains a cornerstone of food security and sustainable agricultural development.`
     },
 
     {
@@ -79,14 +69,9 @@ Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, 
         title: "We grow products with the organic farming",
         date: "05 July 2022",
         image: img5,
-        content: `
-Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
-
-Organic farming emphasizes natural processes, biodiversity, and soil health to produce nutritious food without synthetic chemicals. Farmers rely on composting, crop rotation, and biological pest control to maintain ecological balance. These methods help preserve the environment while ensuring food safety.
-
-Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Organic agriculture not only protects ecosystems but also supports healthier lifestyles and sustainable farming communities.
-`
-
+        content: `Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+                    Organic farming emphasizes natural processes, biodiversity, and soil health to produce nutritious food without synthetic chemicals. Farmers rely on composting, crop rotation, and biological pest control to maintain ecological balance. These methods help preserve the environment while ensuring food safety.
+                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Organic agriculture not only protects ecosystems but also supports healthier lifestyles and sustainable farming communities.`
     },
 
     {
@@ -95,14 +80,9 @@ Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, 
         title: "A Quick Solution to Low Milk Production in Zimbabwe",
         date: "05 July 2022",
         image: img1,
-        content: `
-Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
-
-Low milk production remains a challenge for many dairy farmers in Zimbabwe. Factors such as poor nutrition, limited veterinary care, and outdated farming methods contribute to reduced yields. By adopting modern dairy management practices, farmers can significantly improve milk output.
-
-Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Sustainable dairy farming solutions empower local farmers, improve livelihoods, and strengthen the agricultural economy.
-`
-
+        content: `Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+                    Low milk production remains a challenge for many dairy farmers in Zimbabwe. Factors such as poor nutrition, limited veterinary care, and outdated farming methods contribute to reduced yields. By adopting modern dairy management practices, farmers can significantly improve milk output.
+                    Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Sustainable dairy farming solutions empower local farmers, improve livelihoods, and strengthen the agricultural economy.`
     },
 
     {
@@ -111,21 +91,19 @@ Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, 
         title: "Winter wheat harvest organic gather nice moment",
         date: "05 July 2022",
         image: img6,
-        content: `
-Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
-
-Winter wheat harvest represents one of the most rewarding moments for farmers. Months of careful planning, soil preparation, and crop management culminate in a successful harvest. Organic wheat farming ensures that crops are grown using environmentally friendly practices.
-
-Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. These harvest moments celebrate dedication, sustainability, and the timeless relationship between farmers and the land.
-`
-
+        content: `Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.
+                Winter wheat harvest represents one of the most rewarding moments for farmers. Months of careful planning, soil preparation, and crop management culminate in a successful harvest. Organic wheat farming ensures that crops are grown using environmentally friendly practices.
+                Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. These harvest moments celebrate dedication, sustainability, and the timeless relationship between farmers and the land.`
     },
 
 ];
 
+
+
 const NewsDetails = () => {
     const { slug } = useParams();
     const news = newsData.find((item) => item.slug === slug);
+
 
     if (!news) {
         return <div className="text-center py-20">News not found</div>;
@@ -152,16 +130,18 @@ const NewsDetails = () => {
 
             {/* ===== Layout ===== */}
             <div className="max-w-[1170px] mx-auto px-4 py-20">
-                <div className="flex gap-[30px]">
+                <div className="flex flex-col lg:flex-row gap-[30px]">
+
 
                     {/* ===== LEFT CONTENT (770px) ===== */}
-                    <div className="w-[770px]">
+                    <div className="w-full lg:w-[770px]">
+
                         {/* Image */}
                         <div className="relative mb-6">
                             <img
                                 src={news.image}
                                 alt={news.title}
-                                className="w-full h-[421px] object-cover rounded-[10px]"
+                                className="w-full max-h-[421px] object-cover rounded-[10px]"
                             />
                             <span className="absolute bottom-4 left-4 bg-[#4BAF47] text-white text-[14px] px-4 py-2 rounded-full">
                                 {news.date}
@@ -186,138 +166,229 @@ const NewsDetails = () => {
 
                         {/* Content */}
                         <div
-                            className="text-[#878680] text-[16px] font-medium leading-[30px] mb-10"
-                            style={{ width: "765px" }}
+                            className="
+    text-[#878680]
+    text-[14px] md:text-[16px]
+    font-medium
+    leading-[24px] md:leading-[30px]
+    mb-10
+    w-full max-w-[765px]
+  "
                         >
                             {news.content
                                 .trim()
                                 .split("\n\n")
                                 .map((para, index) => (
-                                    <p key={index} className="mb-6 last:mb-0">
+                                    <p key={index} className="mb-5 md:mb-6 last:mb-0">
                                         {para}
                                     </p>
                                 ))}
                         </div>
 
+
                         {/* ===== TAGS + SOCIAL ===== */}
                         <div
-                            className="flex items-center justify-between border-t pt-8 mb-10"
-                            style={{ width: "770px" }}
+                            className="w-[770px] h-[101px] flex flex-col md:flex-row
+gap-4 md:items-center md:justify-between
+
+             border-t border-[#ECE7E2] px-0"
                         >
+
                             {/* Tags */}
-                            <div className="flex items-center gap-3">
-                                <span className="text-[16px] font-extrabold text-[#1F1E17]">
+                            <div className="flex items-center gap-[16px]">
+                                <span className="text-[18px] leading-[40px] font-extrabold text-[#1F1E17]">
                                     Tags
                                 </span>
 
-                                <span className="bg-[#4BAF47] text-white text-[12px] px-4 py-1 rounded-full">
+                                <Link
+                                    to="/news?tag=harvest"
+                                    className="h-[40px] px-[24px] bg-[#4BAF47] text-white
+                 rounded-[10px] flex items-center justify-center
+                 text-[14px] font-semibold hover:bg-[#3e9f3a] transition"
+                                >
                                     Harvest
-                                </span>
-                                <span className="bg-[#4BAF47] text-white text-[12px] px-4 py-1 rounded-full">
+                                </Link>
+
+                                <Link
+                                    to="/news?tag=vegetables"
+                                    className="h-[40px] px-[24px] bg-[#4BAF47] text-white
+                 rounded-[10px] flex items-center justify-center
+                 text-[14px] font-semibold hover:bg-[#3e9f3a] transition"
+                                >
                                     Vegetables
-                                </span>
+                                </Link>
                             </div>
 
                             {/* Social icons */}
-                            <div className="flex gap-3">
-                                {/* Twitter */}
+                            <div className="flex gap-[10px]">
                                 <a
                                     href="https://twitter.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                    className="w-[40px] h-[40px] rounded-full bg-[#F7F6F1]
+                 flex items-center justify-center
+                 text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white
+                 transition"
                                 >
                                     <FaTwitter size={14} />
                                 </a>
 
-                                {/* Facebook */}
                                 <a
                                     href="https://facebook.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                    className="w-[40px] h-[40px] rounded-full bg-[#F7F6F1]
+                 flex items-center justify-center
+                 text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white
+                 transition"
                                 >
                                     <FaFacebookF size={14} />
                                 </a>
 
-                                {/* Pinterest */}
                                 <a
                                     href="https://pinterest.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                    className="w-[40px] h-[40px] rounded-full bg-[#F7F6F1]
+                 flex items-center justify-center
+                 text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white
+                 transition"
                                 >
                                     <FaPinterestP size={14} />
                                 </a>
 
-                                {/* LinkedIn */}
                                 <a
                                     href="https://linkedin.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-8 h-8 rounded-full bg-[#F7F6F1] flex items-center justify-center text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white transition cursor-pointer"
+                                    className="w-[40px] h-[40px] rounded-full bg-[#F7F6F1]
+                 flex items-center justify-center
+                 text-[#1F1E17] hover:bg-[#4BAF47] hover:text-white
+                 transition"
                                 >
                                     <FaLinkedinIn size={14} />
                                 </a>
                             </div>
-
-
                         </div>
+
 
                         {/* ===== RELATED POSTS ===== */}
-                        <div className="grid grid-cols-2 gap-[30px] mb-14" style={{ width: "770px" }}>
-                            <div className="bg-[#F8F7F0] rounded-[10px] p-6">
-                                <p className="font-extrabold text-[#1F1E17] leading-[26px]">
+                        <div className="grid grid-cols-1 md:grid-cols-2
+gap-[30px] w-full lg:w-[770px]
+ gap-[30px] mb-14 ">
+
+                            <Link
+                                to="/news/agronomy-and-relation-to-other-sciences"
+                                className="w-[370px] h-[169.47px] bg-[#F8F7F0] rounded-[10px]
+               pt-[51.13px] pl-[50px]
+               hover:bg-[#EDEBE2] transition"
+                            >
+                                <p className="text-[20px] leading-[32.74px] font-extrabold text-[#1F1E17]">
                                     Agronomy and relation to<br />Other Sciences
                                 </p>
-                            </div>
+                            </Link>
 
-                            <div className="bg-[#F8F7F0] rounded-[10px] p-6">
-                                <p className="font-extrabold text-[#1F1E17] leading-[26px]">
+                            <Link
+                                to="/news/bringing-food-production-back-to-cities"
+                                className="w-[370px] h-[169.47px] bg-[#F8F7F0] rounded-[10px]
+               pt-[51.13px] pl-[50px]
+               hover:bg-[#EDEBE2] transition"
+                            >
+                                <p className="text-[20px] leading-[32.74px] font-extrabold text-[#1F1E17]">
                                     Bringing Food Production<br />Back To Cities
                                 </p>
-                            </div>
+                            </Link>
+
                         </div>
 
+
+
                         {/* ===== LEAVE A COMMENT ===== */}
-                        <div style={{ width: "770px" }}>
-                            <h3 className="text-[26px] font-extrabold text-[#1F1E17] mb-2">
+                        <div className="w-[770px]">
+
+                            {/* Title */}
+                            <h3 className="text-[26px] leading-[32.5px] font-extrabold text-[#1F1E17] mb-[20px]">
                                 Leave a Comment
                             </h3>
 
-                            <label className="flex items-center gap-2 text-[14px] text-[#878680] mb-6">
-                                <input type="checkbox" />
-                                Save my name, email, and website in this browser for the next time I comment.
-                            </label>
+                            <div className="grid grid-cols-[18px_1fr] gap-x-[10px] mb-[24px] w-full">
+                                <input
+                                    id="save-info"
+                                    type="checkbox"
+                                    className="mt-[6px] accent-[#4BAF47] cursor-pointer"
+                                />
 
-                            <div className="grid grid-cols-2 gap-6 mb-6">
+                                <label
+                                    htmlFor="save-info"
+                                    className="
+      text-[14px] md:text-[16px]
+      leading-[22px] md:leading-[30px]
+      font-medium text-[#878680]
+      cursor-pointer
+      break-words
+      w-full
+    "
+                                >
+                                    Save my name, email, and website in this browser for the next time I comment.
+                                </label>
+                            </div>
+
+
+
+
+
+
+
+
+                            {/* Inputs */}
+                            <div className="grid grid-cols-1 md:grid-cols-2
+ gap-[30px] mb-[30px]">
                                 <input
                                     type="text"
                                     placeholder="Full Name"
-                                    className="h-[56px] rounded-[10px] px-4 bg-[#F8F7F0] outline-none"
+                                    className="w-[370px] h-[56.75px]
+                 rounded-[10px] px-[20px]
+                 bg-[#F8F7F0] border border-[#F8F7F0]
+                 outline-none text-[16px] text-[#878680]"
                                 />
+
                                 <input
                                     type="email"
                                     placeholder="Email Address"
-                                    className="h-[56px] rounded-[10px] px-4 bg-[#F8F7F0] outline-none"
+                                    className="w-[370px] h-[56.75px]
+                 rounded-[10px] px-[20px]
+                 bg-[#F8F7F0] border border-[#F8F7F0]
+                 outline-none text-[16px] text-[#878680]"
                                 />
                             </div>
 
+                            {/* Textarea */}
                             <textarea
                                 placeholder="Write Comment"
-                                className="w-full h-[200px] rounded-[10px] px-4 py-4 bg-[#F8F7F0] outline-none mb-6 resize-none"
+                                className="w-[770px] h-[200px]
+               rounded-[10px] px-[20px] py-[20px]
+               bg-[#F8F7F0] border border-[#F8F7F0]
+               outline-none text-[16px] text-[#878680]
+               resize-none mb-[30px]"
                             />
 
-                            <button className="bg-[#4BAF47] text-white px-10 py-4 rounded-[10px]">
+                            {/* Button */}
+                            <button
+                                className="w-[220.83px] h-[60.5px]
+               bg-[#4BAF47] rounded-[10px]
+               text-white text-[16px] font-semibold
+               hover:bg-[#3e9f3a] transition"
+                            >
                                 Post Comment
                             </button>
                         </div>
 
+
                     </div>
 
                     {/* ===== RIGHT SIDEBAR (370px) ===== */}
-                    {/* ===== RIGHT SIDEBAR ===== */}
-                    <aside className="w-[370px] min-h-[1844.72px] space-y-[30px]">
+
+                    <aside className="w-full lg:w-[370px] min-h-[1844.72px] space-y-[30px]">
 
                         {/* Search */}
                         {/* ===== Search ===== */}
@@ -325,78 +396,122 @@ const NewsDetails = () => {
                             <input
                                 type="text"
                                 placeholder="Search here..."
-                                className="flex-1 bg-transparent outline-none text-white placeholder-white text-[14px]"
+                                className="flex-1 bg-transparent outline-none text-white placeholder-white text-[20px]"
                             />
-                            <FaSearch className="text-white text-[18px]" />
+                            <FaSearch className="text-white text-[35px]" />
                         </div>
 
 
                         {/* ===== Latest Posts ===== */}
-                        <div className="w-[370px] h-[453.36px] bg-[#F7F6F1] rounded-[10px] p-6">
-                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-5">
+                        <div className="w-[370px] bg-[#F7F6F1] rounded-[12px] p-6">
+                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-6">
                                 Latest Posts
                             </h4>
 
-                            {newsData.slice(0, 3).map((item) => (
-                                <Link
-                                    key={item.id}
-                                    to={`/news/${item.slug}`}
-                                    className="flex gap-4 mb-5 last:mb-0"
-                                >
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className="w-[70px] h-[70px] object-cover rounded-[8px]"
-                                    />
+                            {newsData.slice(0, 3).map((item) => {
+                                const isActive = slug === item.slug;
 
-                                    <div>
-                                        <p className="text-[12px] text-[#878680] mb-1">
-                                            by Kevin Martin
-                                        </p>
-                                        <p className="text-[14px] font-medium leading-[20px] text-[#1F1E17]">
-                                            {item.title}
-                                        </p>
-                                    </div>
-                                </Link>
-                            ))}
+                                return (
+                                    <Link
+                                        key={item.id}
+                                        to={`/news/${item.slug}`}
+                                        className={`flex items-start gap-4 p-3 rounded-[10px] mb-4 last:mb-0
+          transition-all duration-200
+          ${isActive
+                                                ? "bg-white shadow-sm"
+                                                : "bg-transparent hover:bg-white/60"
+                                            }`}
+                                    >
+                                        {/* Image */}
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="w-[70px] h-[70px] rounded-[10px] object-cover flex-shrink-0"
+                                        />
+
+                                        {/* Content */}
+                                        <div className="flex flex-col gap-1">
+                                            {/* Author */}
+                                            <div className="flex items-center gap-2 text-[#878680] text-[14px] leading-[20px]">
+                                                <FaUser className="text-[#F2B21B] text-[12px]" />
+
+                                                <span className="font-medium">by Kevin Martin</span>
+                                            </div>
+
+                                            {/* Title */}
+                                            <p className="text-[14px] font-extrabold leading-[26px] text-[#1F1E17]">
+                                                {item.title}
+                                            </p>
+                                        </div>
+                                    </Link>
+                                );
+                            })}
                         </div>
 
+
+
+
                         {/* ===== Categories ===== */}
-                        <div className="w-[370px] h-[396px] bg-[#F7F6F1] rounded-[10px] p-6">
-                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-5">
+                        <div className="w-[370px] h-[396px] bg-[#F8F7F0] rounded-[10px] 
+                pt-[40px] pb-[40px] pl-[50px] pr-[50px]">
+
+                            <h4 className="text-[20px] leading-[27px] font-extrabold text-[#1F1E17] mb-[24px]">
                                 Categories
                             </h4>
 
-                            <ul className="space-y-3 text-[14px] text-[#878680]">
-                                <li>Agriculture</li>
-                                <li>Farm</li>
-                                <li>Farming</li>
-                                <li>Fresh Vegetables</li>
-                                <li>Harvest</li>
-                                <li>Organic Food</li>
+                            <ul className="text-[16px] leading-[47px] font-medium text-[#878680]">
+                                {[
+                                    "Agriculture",
+                                    "Farm",
+                                    "Farming",
+                                    "Fresh Vegetables",
+                                    "Harvest",
+                                    "Organic Food",
+                                ].map((cat) => (
+                                    <li key={cat}>
+                                        <Link
+                                            to={`/news?category=${cat.toLowerCase().replace(/\s+/g, "-")}`}
+                                            className="hover:text-[#1F1E17] transition"
+                                        >
+                                            {cat}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
 
+
+
+
+
                         {/* ===== Tags ===== */}
-                        <div className="w-[370px] h-[276px] bg-[#F7F6F1] rounded-[10px] p-6">
-                            <h4 className="text-[18px] font-extrabold text-[#1F1E17] mb-5">
+                        <div className="w-[370px] h-[276px] bg-[#F8F7F0] rounded-[10px]
+                pt-[40px] pl-[50px] pr-[50px]">
+
+                            <h4 className="text-[20px] leading-[30px] font-extrabold text-[#1F1E17] mb-[21px]">
                                 Tags
                             </h4>
 
-                            <div className="flex flex-wrap gap-3">
-                                {["Agriculture", "Farming", "Harvest", "Organic", "Vegetables"].map(
-                                    (tag) => (
-                                        <span
-                                            key={tag}
-                                            className="px-4 py-2 bg-white border border-[#E5E5E5] rounded-full text-[13px] text-[#1F1E17]"
-                                        >
-                                            {tag}
-                                        </span>
-                                    )
-                                )}
+                            <div className="flex flex-wrap gap-x-[10px] gap-y-[10px]">
+                                {["Agriculture", "Farming", "Harvest", "Organic", "Vegetables"].map((tag) => (
+                                    <Link
+                                        key={tag}
+                                        to={`/news?tag=${tag.toLowerCase()}`}
+                                        className="h-[40px] px-[24px] bg-white rounded-[10px]
+                   flex items-center justify-center
+                   text-[14px] font-semibold text-[#1F1E17]
+                   hover:bg-[#4BAF47] hover:text-white
+                   transition"
+                                    >
+                                        {tag}
+                                    </Link>
+                                ))}
                             </div>
                         </div>
+
+
+
 
 
 

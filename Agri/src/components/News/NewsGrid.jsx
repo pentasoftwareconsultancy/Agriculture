@@ -79,8 +79,14 @@ const NewsGrid = () => {
             </div>
 
             {/* ===== Grid ===== */}
-            <div className="mx-auto py-20 w-[1170px]">
-                <div className="grid grid-cols-3 gap-[30px]">
+            <div className="mx-auto py-12 px-4
+                max-w-[1170px]">
+
+                <div className="grid grid-cols-1
+                  md:grid-cols-2
+                  lg:grid-cols-3
+                  gap-[30px]">
+
                     {orderedNews.map((news) => (
                         <Link
                             to={`/news/${news.slug}`}
@@ -88,7 +94,8 @@ const NewsGrid = () => {
                             className="block"
                         >
                             {/* CARD */}
-                            <div className="w-[370px] h-[514px] bg-white rounded-[10px] shadow-[0px_2px_14px_rgba(0,0,0,0.05)] overflow-hidden">
+                            <div className="w-full max-w-[370px] mx-auto
+                h-auto min-h-[514px] bg-white rounded-[10px] shadow-[0px_2px_14px_rgba(0,0,0,0.05)] overflow-hidden">
 
                                 {/* IMAGE */}
                                 <div className="h-[300px] relative">
