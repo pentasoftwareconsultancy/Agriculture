@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
+import ContactPage from './pages/ContactPage.jsx'
 import Navbar from './components/navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import NewsGrid from "./components/News/NewsGrid";
 import NewsDetails from "./components/News/NewsDetails";
+
 
 import ProductDetails from "./components/Shop/ProductDetails";
 
@@ -39,6 +41,8 @@ function App() {
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/shop/:productId" element={<ProductDetails />} />
             
+            <Route path="/Contact" element={<ContactPage />} />
+
           </Routes>
 
         </main>
